@@ -2,18 +2,22 @@
 <html>
 <head>
   <meta charset="UTF-8"> 
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>GPS TangoMesh</title>
 </head>
 <body>
-  <form name="inputForm" onsubmit="return validateNumeric()" action="http://tangomesh.tk/gps/test.php" method="post">
-    <label for="vehicle_id">Inserta el id asignado a tu vehiculo</label>
-    <br>
-    <br>
-    <input type="number" name="vehicle_id" id="vehicle_id">
-    <br>
-    <br>
-    <input type="submit" value="Iniciar Prueba">
-  </form>
+  <div>
+    <img src="logo.png" class="logo">
+    <form name="inputForm" onsubmit="return validateNumeric()" action="http://tangomesh.tk/gps/test.php" method="post">
+      <img src="banner.jpg" width="100%">
+      <h1>Mobile GPS</h1>
+      <label for="vehicle_id">Inserta el id asignado a tu vehiculo</label>
+      <br><br>
+      <input type="number" class="input-field" name="vehicle_id" id="vehicle_id">
+      <br><br>
+      <input type="submit" class="button" value="Iniciar Prueba">
+    </form>
+  </div>
   <script type="text/javascript">
     function validateNumeric () {
       var x = document.forms['inputForm']['vehicle_id'].value;
