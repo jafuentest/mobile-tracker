@@ -5,11 +5,20 @@ html {
   font-size: 16px;
   text-align: center;
 }
-html, body, form { height: 100%; margin: -1px 0; padding: 0 }
-div {
+html, body, form {
+  height: 100%;
+  margin: -1px 0;
+  padding: 0
+}
+div.container {
   margin: auto;
   text-align: left;
-  width: 60%;
+}
+@media (max-width:767px) {
+  div.container { width: 100% }
+}
+@media (min-width:768px) {
+  div.container { width: 60% }
 }
 form {
   background-color: #fff;
