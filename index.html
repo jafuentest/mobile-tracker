@@ -4,12 +4,22 @@
   <title>GPS TangoMesh</title>
 </head>
 <body>
-  <form action="http://tangomesh.tk/gps/test.php" method="post">
+  <form name="inputForm" onsubmit="return validateNumeric()" action="http://tangomesh.tk/gps/test.php" method="post">
     <label for="vehicle_id">Inserta el id asignado a tu vehiculo</label>
     <br>
     <input type="number" name="vehicle_id" id="vehicle_id">
     <br>
     <input type="submit" value="Iniciar Prueba">
   </form>
+  <script type="text/javascript">
+    function validateNumeric () {
+      var x = document.forms['inputForm']['vehicle_id'].value;
+      if ( x == null || x == '' || isNaN(x) ) {
+        alert( 'Debe ingresar únicamente el número' );
+        return false;
+      }
+      return true;
+    }
+  </script>
 </body>
 </html>
